@@ -19,8 +19,8 @@ class TestCron extends Command
      *
      * @var string
      */
-    // protected $description = 'test cron';
-    protected $description = 'write info messages in log file';
+    protected $description = 'test cron';
+    // protected $description = 'write info messages in log file';
 
     /**
      * Create a new command instance.
@@ -39,9 +39,9 @@ class TestCron extends Command
      */
     public function handle()
     {
-        // $file_name = 'test.txt';
-        // $input = 'テストです';
-        // file_put_contents($file_name,$input,FILE_APPEND);
-        logger()->info('This is WriteLog Command.');
+        $file_name = 'test.txt';
+        $input = 'テストです';
+        file_put_contents($file_name,$input,FILE_APPEND);
+        // logger()->info('This is WriteLog Command.');
     }
 }
